@@ -246,8 +246,12 @@ int main()
     {
         char player_response[8];
         char *BOT_response[3] = {"STONE", "PAPER", "SCISSOR"};
-        printf("\n\nSELECT STONE or PAPER or SCISSOR (All Letters should be in Capital): \n");
+        
+        printf("\n\nSELECT Stone or Paper or Scissor(All The Best!): \n");
         scanf("%s", player_response);
+        for(int i=0;player_response[i]!='\0';i++){
+               player_response[i]=toupper(player_response[i]);
+        }
 
         if (rounds % 3 == 1)
         {
